@@ -336,7 +336,7 @@
 
         // Load Products from localStorage or use defaults
         function loadProducts() {
-            let products = JSON.parse(localStorage.getItem('monarchProducts'));
+            let products;
             
             // Default products if none exist
             if (!products || products.length === 0) {
@@ -452,7 +452,7 @@
                         image: "https://static.photos/indoor/400x300/8"
                     }
                 ];
-                localStorage.setItem('monarchProducts', JSON.stringify(products));
+                
             }
             
             displayProducts(products);
